@@ -1,0 +1,89 @@
+---
+title: "Actividad 1.1: Introducción a las ómicas"
+author: "Sergi Roig Soucase"
+date: "2024-09-30"
+output: html_document
+---
+
+# Pregunta 1
+
+**El objetivo de esta actividad es que tengáis un primer contacto con
+alguna ómica, ahora que todavía no hemos trabajado con ninguna de ellas.
+De hecho podéis trabajar con cualquiera incluida la transcriptómica, que
+trabajaremos en detalle en este curso.**
+
+**Para ello tenéis que buscar un artículo o algún trabajo en el que se
+utilice una tecnología ómica para resolver un problema científico (puede
+ser médico, ecológico, de nutrición, etc..) y recopilad la siguiente
+información:**
+
+1.  **El título**
+
+*In vivo DNA replication dynamics unveil aging-dependent replication
+stress*
+
+2.  **La referencia o enlace al artículo**
+
+<https://pubmed.ncbi.nlm.nih.gov/39293447/>
+
+3.  **El objetivo y ámbito de aplicación**
+
+El objetivo de este estudio es identificar zonas del genoma donde se
+pueden localizar orígenes de replicación utilizando hígados de ratones,
+y estudiar si existen diferencias entre ratones jóvenes y viejos. El
+ámbito de aplicación sería biomedicina.
+
+4.  **La tecnología o tecnologías ómicas que utilizan para generar los
+    datos**
+
+Se utiliza la secuenciación genómica de las cadenas de DNA nacientes
+(EdUseq) además de transcriptómica, para secuenciar el RNA (RNAseq).
+
+5.  **Una breve explicación de vuestra parte de porqué esta (o éstas
+    ómicas) resultan adecuadas en este problema**
+
+La genómica es la más adecuada ya que el estudio pretende localizar
+lugares en todo el genoma del ratón que se correspondan con inicios de
+replicación. Es por ello que utilizan una técnica que secuencia células
+que se encuentran en la misma fase de la replicación y compara entre
+células en estado basal y células a las que se les ha forzado que se
+repliquen más debido a un daño externo.
+
+# Pregunta 2
+
+El objetivo de esta segunda parte de la actividad es, que os
+familiaricéis con Bioconductor a la vez que lo hacéis con los
+repositorios de github. A tal fin tenéis que clonar el siguiente
+repositorio con el que trabajaremos más adelante en el curso:
+
+<https://github.com/aspteaching/Omics_Data_Analysis-Case_Study_0-Introduction_to_BioC/>
+
+Como podéis leer en el documento Usando git con R y Rstudio.pdf, para hacerlo, tan
+sólo necesitáis tener “git” instalado en vuestro ordenador y, crear un proyecto de R
+bajo control de versión con git.
+
+Una vez hayáis clonado el repositorio podéis recorrer el documento que ofrece una
+introducción a las clases (OOP) de Bioconductor y en concreto a la clase
+ExpressionSet para el manejo de datos omicos con estructura tabular como los que
+veremos en las próximas actividades.
+
+Como muestra de vuestra comprensión de este documento debéis realizar el ejercicio
+que aparece al final del mismo y que consiste básicamente en:
+
+1. Seleccionar un dataset de GEO (Gene Expression Omnibus) de la lista que se
+presenta en el documento “GEOdatasets_enhanced.xls” disponible en los
+recursos de la acrtividad.
+
+2. Leer los datos desde GEO utilizando el paquete GEOquery. Esto os
+proporcionará un objeto clase expressionSet con los datos normalizados y
+una tabla adicional con información sobre el estudio.
+
+3. Determinar la estructura de los datos (filas, columnas)y el diseño del estudio
+(grupos de muestras o individuos, tratamientos si los hay, etc.) que los ha
+generado.
+
+– La información del experimento podéis descargarla también de GEO,
+bien con GEOquery si proporcionáis el identificador de dataset GDSxxxx
+o accediendo a la página del estudio.
+
+
